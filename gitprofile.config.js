@@ -210,7 +210,7 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: 'ROUNAK KUMAR JHA ',
+  footer: '✌𝓡𝓞𝓤𝓝𝓐𝓚 𝓚𝓤𝓜𝓐𝓡 𝓙𝓗𝓐✌',
 };
 
 export default config;

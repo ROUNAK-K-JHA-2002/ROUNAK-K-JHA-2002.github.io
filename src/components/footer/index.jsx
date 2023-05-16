@@ -10,7 +10,7 @@ const Footer = ({ content, loading }) => {
       {loading ? (
         skeleton({ width: 'w-52', height: 'h-6' })
       ) : (
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div style={{fontSize:"2em"}} dangerouslySetInnerHTML={{ __html: content }} />
       )}
     </div>
   );
