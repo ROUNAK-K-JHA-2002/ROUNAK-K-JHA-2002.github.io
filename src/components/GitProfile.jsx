@@ -157,14 +157,7 @@ const GitProfile = ({ config }) => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
                   <div className="col-span-1">
                     <div className="grid grid-cols-1 gap-6">
-                      {!sanitizedConfig.themeConfig.disableSwitch && (
-                        <ThemeChanger
-                          theme={theme}
-                          setTheme={setTheme}
-                          loading={loading}
-                          themeConfig={sanitizedConfig.themeConfig}
-                        />
-                      )}
+                      
                       <AvatarCard
                         profile={profile}
                         loading={loading}
@@ -177,11 +170,7 @@ const GitProfile = ({ config }) => {
                         github={sanitizedConfig.github}
                         social={sanitizedConfig.social}
                       />
-                      <Skill
-                        loading={loading}
-                        skills={sanitizedConfig.skills}
-                      />
-                      <Experience
+                       <Experience
                         loading={loading}
                         experiences={sanitizedConfig.experiences}
                       />
@@ -193,26 +182,38 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         certifications={sanitizedConfig.certifications}
                       />
+                      {!sanitizedConfig.themeConfig.disableSwitch && (
+                        <ThemeChanger
+                          theme={theme}
+                          setTheme={setTheme}
+                          loading={loading}
+                          themeConfig={sanitizedConfig.themeConfig}
+                        />
+                      )}
                     </div>
                   </div>
                   <div className="lg:col-span-2 col-span-1">
                     <div className="grid grid-cols-1 gap-6">
+                    <Skill
+                        loading={loading}
+                        skills={sanitizedConfig.skills}
+                      />
                       <Project
                         repo={repo}
                         loading={loading}
                         github={sanitizedConfig.github}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                       />
-                      <ExternalProject
+                      {/* <ExternalProject
                         loading={loading}
                         externalProjects={sanitizedConfig.externalProjects}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
-                      />
-                      <Blog
+                      /> */}
+                      {/* <Blog
                         loading={loading}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                         blog={sanitizedConfig.blog}
-                      />
+                      /> */}
                     </div>
                   </div>
                 </div>
