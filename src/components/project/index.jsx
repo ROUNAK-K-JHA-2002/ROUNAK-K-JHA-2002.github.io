@@ -135,7 +135,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                     {loading ? (
                       skeleton({ width: 'w-40', height: 'h-8' })
                     ) : (
-                      <span className="text-base-content">
+                      <span style={{fontSize:"1.3em"}} className="text-base-content">
                         My Projects
                       </span>
                     )}

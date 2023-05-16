@@ -2,15 +2,16 @@ import { skeleton } from '../../helpers/utils';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const ListItem = ({ time, degree, institution }) => (
+const ListItem = ({ time,note, degree, institution }) => (
   <li className="mb-5 ml-4">
     <div
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
       style={{ left: '-4.5px' }}
     ></div>
-    <div className="my-0.5 text-xs">{time}</div>
-    <h3 className="font-semibold">{degree}</h3>
-    <div className="mb-4 font-normal">{institution}</div>
+    <div style={{fontSize:"1.3em",color:"#fafafa"}} className=" font-semibold">{institution}</div>
+    <h3 style={{fontSize:"1.2em"}} className="my-1 font-semibold">{degree}</h3>
+    <div style={{fontSize:"1.2em"}} className="my-1 text-xs">{time}</div>
+    <div style={{fontSize:"1.2em"}} className="mb-4  text-xs">{note}</div>
   </li>
 );
 
@@ -48,7 +49,7 @@ const Education = ({ loading, education }) => {
                 {loading ? (
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
-                  <span className="text-base-content opacity-70">
+                  <span style={{fontSize:"1.3em"}} className="text-base-content opacity-100">
                     Education
                   </span>
                 )}
@@ -63,8 +64,9 @@ const Education = ({ loading, education }) => {
                     {education.map((item, index) => (
                       <ListItem
                         key={index}
-                        time={`${item.from} - ${item.to}`}
+                        time={`${item.from == '' ? '' : ' -'} ${item.to}`}
                         degree={item.degree}
+                        note={item.note}
                         institution={item.institution}
                       />
                     ))}
@@ -86,6 +88,7 @@ Education.propTypes = {
 
 ListItem.propTypes = {
   time: PropTypes.node,
+  note: PropTypes.node,
   degree: PropTypes.node,
   institution: PropTypes.node,
 };

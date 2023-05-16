@@ -3,8 +3,8 @@
 const config = {
   github: {
     username: 'ROUNAK-K-JHA-2002', // Your GitHub org/user name. (Required)
-    sortBy: 'updated', // stars | updated
-    limit: 8, // How many projects to display.
+    sortBy: 'stars', // stars | updated
+    limit: 6, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
@@ -15,11 +15,11 @@ const config = {
     twitter: '',
     mastodon: '',
     facebook: '',
-    instagram: '',
+    instagram: '__rounak.k.jha_8683__',
     dribbble: '',
     behance: '',
     medium: '',
-    dev: '',
+    dev: 'rounak_k_jha2002',
     stackoverflow: '', // format: userid/username
     skype: '',
     telegram: '',
@@ -29,7 +29,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://drive.google.com/file/d/1-Ej35IaaHfqfo2USffuHJ2wxyjrwL0Y7/view?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'JavaScript',
@@ -51,19 +51,30 @@ const config = {
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Triunits Pvt. Ltd.',
+      position: 'Flutter Development Intern',
+      work1: ' 1. Headed the Android Development of a Health App, integrated prominent features, improving overall user experience.',
+      work2: ' 2. Contributing to Frontend Android Development in a Car Details Tracking App.',
+      work3: ' 3. Tech Stacks Used -  ',
+      techStackUsed: '  Flutter , Firebase , NodeJs',
+      from: 'Jan 2023',
       to: 'Present',
       companyLink: 'https://example.com',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
+      company: 'Alstonia Kolkata',
+      position: 'Web Developer Intern',
+      work1: ' 1. Contributed to the front-end of service of the Company using Hugo Site Builder and improved the website performance by 50%.',
+      work2: ' 2. Made a React - Express Component for Company`s own Auth Server Authentication using React JS, Express JS.',
+      work3: ' 3. Tech Stacks Used -  ',
+      techStackUsed: '  Hugo, ReactJs, NodeJs',
+      from: 'Dec 2022 ',
+      to: 'Jan 2023',
       companyLink: 'https://example.com',
     },
+
+    
+   
   ],
   /* certifications: [
     {
@@ -73,12 +84,31 @@ const config = {
       link: 'https://example.com'
     },
   ], */
+
+  
+
+  
   education: [
     {
       institution: 'National Institute Of Technology, Durgapur',
       degree: 'B.Tech',
       from: '2021',
-      to: '2025',
+      to: 'present',
+      note: 'CGPA : 8.13 (3rd Semester)',
+    },
+    {
+      institution: 'Sunrise (English Medium) School,Liluah',
+      degree: '12th',
+       from: '',
+      to: '2020',
+      note: '90.5%',
+    },
+    {
+      institution: 'Sunrise (English Medium) School,Liluah',
+      degree: '10th',
+       from: '',
+      to: '2018',
+      note: '88.2%',
     },
     // {
     //   institution: 'Institution Name',
@@ -180,7 +210,7 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: 'Made with <a  class="text-primary" href="https://github.com/arifszn/gitprofile" target="_blank" rel="noreferrer">GitProfile</a> and ❤️ \n ROUNAK KUMAR JHA',
+  footer: 'ROUNAK KUMAR JHA ',
 };
 
 export default config;

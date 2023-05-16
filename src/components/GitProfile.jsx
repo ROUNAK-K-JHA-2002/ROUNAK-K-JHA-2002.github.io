@@ -27,6 +27,7 @@ import '../assets/index.css';
 import { formatDistance } from 'date-fns';
 import ExternalProject from './external-project';
 
+
 const bgColor = 'bg-base-300';
 
 const GitProfile = ({ config }) => {
@@ -95,7 +96,7 @@ const GitProfile = ({ config }) => {
           })
           .then((response) => {
             let data = response.data;
-
+              console.log(data)
             setRepo(data.items);
           })
           .catch((error) => {
@@ -170,34 +171,36 @@ const GitProfile = ({ config }) => {
                         github={sanitizedConfig.github}
                         social={sanitizedConfig.social}
                       />
-                       <Experience
+                      <Skill
                         loading={loading}
-                        experiences={sanitizedConfig.experiences}
+                        skills={sanitizedConfig.skills}
                       />
                       <Education
                         loading={loading}
                         education={sanitizedConfig.education}
                       />
-                      <Certification
+                      {/* <Certification
                         loading={loading}
                         certifications={sanitizedConfig.certifications}
-                      />
-                      {!sanitizedConfig.themeConfig.disableSwitch && (
+                      /> */}
+                      {/* {!sanitizedConfig.themeConfig.disableSwitch && (
                         <ThemeChanger
                           theme={theme}
                           setTheme={setTheme}
                           loading={loading}
                           themeConfig={sanitizedConfig.themeConfig}
                         />
-                      )}
+                      )} */}
                     </div>
                   </div>
                   <div className="lg:col-span-2 col-span-1">
                     <div className="grid grid-cols-1 gap-6">
-                    <Skill
+                    
+                       <Experience
                         loading={loading}
-                        skills={sanitizedConfig.skills}
+                        experiences={sanitizedConfig.experiences}
                       />
+                      {/* <Responsibilities loading={loading} responsibilties={sanitizeConfig.responsibility} /> */}
                       <Project
                         repo={repo}
                         loading={loading}

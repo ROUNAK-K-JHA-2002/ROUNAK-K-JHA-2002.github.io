@@ -49,14 +49,15 @@ const ListItem = ({ icon, title, value, link, skeleton = false }) => {
       rel="noreferrer"
       className="flex justify-start py-2 px-1 items-center"
     >
-      <div className="flex-grow font-medium gap-2 flex items-center my-1">
-        {icon} {title}
+      <div style={{fontSize: "1.2em"}} className="flex-grow  font-medium gap-2 flex items-center my-1">
+        {icon}   {title}
       </div>
       <div
         className={`${
           skeleton ? 'flex-grow' : ''
-        } text-sm font-normal text-right mr-2 ml-3 ${link ? 'truncate' : ''}`}
+        } text-lg font-mono text-right mr-2 ml-3 ${link ? 'truncate' : ''}`}
         style={{
+          fontSize:"1.15em",
           wordBreak: 'break-word',
         }}
       >
@@ -87,10 +88,12 @@ const Details = ({ profile, loading, social, github }) => {
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
-        <div className="text-base-content text-opacity-60">
+        <div className="text-base-content text-opacity-90">
           {loading || !profile ? (
             renderSkeleton()
           ) : (
+            <>
+            
             <Fragment>
               {profile.location && (
                 <ListItem
@@ -238,7 +241,8 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`mailto:${social.email}`}
                 />
               )}
-            </Fragment>
+            </Fragment></>
+            
           )}
         </div>
       </div>

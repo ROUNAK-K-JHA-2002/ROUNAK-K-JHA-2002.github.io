@@ -40,16 +40,16 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
           </div>
         )}
         <div className="text-center mx-auto px-8">
-          <h5 className="font-bold text-2xl">
+          <h4 className="font-bold text-2xl">
             {loading || !profile ? (
               skeleton({ width: 'w-48', height: 'h-8' })
             ) : (
-              <span className="text-base-content opacity-70">
+              <span className="text-base-content ">
                 {profile.name}
               </span>
             )}
-          </h5>
-          <div className="mt-3 text-base-content text-opacity-60 font-mono">
+          </h4>
+          <div style={{fontSize:"1.2em"}} className="mt-3 text-base-content text-opacity-80 font-mono">
             {loading || !profile
               ? skeleton({ width: 'w-48', height: 'h-5' })
               : profile.bio}
@@ -64,7 +64,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
             <a
               href={resume.fileUrl}
               target="_blank"
-              className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
+              className="btn btn-outline btn-sm text-sm mt-6 opacity-80"
               download
               rel="noreferrer"
             >
